@@ -3,3 +3,8 @@ export type CardType = {
   description: string;
   date: string;
 };
+
+export type DateType = {
+  dateString: string;
+  formatType?: string;
+};
