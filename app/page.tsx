@@ -1,4 +1,5 @@
 import styles from './page.module.css';
+import Card from 'components/card.client';
 
 const getBlogData = () => {
   return [
@@ -15,9 +16,12 @@ export default function Home() {
   return (
     <main className={styles.main}>
       {data.map(({ title, description, formattedDate }, idx) => (
-        <div key={`${idx}-${title}`}>
-          <h2>{title}</h2>
-        </div>
+        <Card
+          key={`${idx}-${title}`}
+          title={title}
+          description={description}
+          date={formattedDate}
+        />
       ))}
     </main>
   );
